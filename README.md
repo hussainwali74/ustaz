@@ -1,6 +1,4 @@
-
-This is the starter project for this video : https://youtu.be/eBzJwlnrqIQ?si=FgxpM6-VHNzhgDvz
-
+AI Tutor for future
 
 
 Feels free to contribute
@@ -9,8 +7,7 @@ Feels free to contribute
 
 
 
-
-## Getting Started
+# Getting Started
 
 First, run the development server:
 
