@@ -6,6 +6,7 @@ import { NavOnboarding } from "@/components/NavOnboarding";
 import { useRouter } from "next/router";
 import { OnboardingSelectBox } from "@/components/OnboardingSelectBox";
 import axios from "axios";
+import { userPreferencesInterface } from "@/db/sqlite";
 
 const source_serif = Source_Serif_4({ subsets: ["latin"] });
 const inter = Inter({ subsets: ["latin"] });
@@ -20,8 +21,27 @@ const items = [
 export default function Page() {
     let router = useRouter()
 
-    const action = (value: string)=>{
-        
+    const action = async (value: string) => {
+        const user_preferences: userPreferencesInterface = {
+            languageLevel: localStorage.getItem('languageLevel') ?? "",
+            objectives: localStorage.getItem('objectives') ?? "",
+            commitment: value
+        }
+        try {
+            const response = await axios.post('/api/user/save_preferences', user_preferences)
+
+            console.log('-----------------------------------------------------')
+            console.log(`response :>>`, response)
+            console.log('-----------------------------------------------------')
+            router.push('/assistant/chat')
+
+        } catch (error) {
+
+            console.log('-----------------------------------------------------')
+            console.log(`error in commitment.tsx 36 :>>`, error)
+            console.log('-----------------------------------------------------')
+
+        }
     }
   return (
         <main className={`flex w-full min-h-screen bg-[#f7f5ff] flex-col p-0  ${inter.className}`}>  
