@@ -2,50 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body{
+html,
+body {
     overflow: hidden;
 }
- 
+
 /* Firefox */
 .chatbot-container {
     scrollbar-width: thin;
     scrollbar-color: var(--secondary) var(--primary);
-  }
-  
-  /* Chrome, Edge, and Safari */
-  .chatbot-container::-webkit-scrollbar {
+}
+
+/* Chrome, Edge, and Safari */
+.chatbot-container::-webkit-scrollbar {
     width: 15px;
-  }
-  
-  .chatbot-container::-webkit-scrollbar-track {
+}
+
+.chatbot-container::-webkit-scrollbar-track {
     background: var(--primary);
     border-radius: 5px;
-  }
-  
-  .chatbot-container::-webkit-scrollbar-thumb {
+}
+
+.chatbot-container::-webkit-scrollbar-thumb {
     background-color: var(--secondary);
     border-radius: 14px;
     border: 3px solid var(--primary);
-  }
+}
 
-  /* Firefox */
+/* Firefox */
 * {
     scrollbar-width: thin;
     scrollbar-color: var(--secondary) var(--primary);
-  }
-  
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
     width: 15px;
-  }
-  
-  *::-webkit-scrollbar-track {
+}
+
+*::-webkit-scrollbar-track {
     background: var(--primary);
     border-radius: 5px;
-  }
-  
-  *::-webkit-scrollbar-thumb {
+}
+
+*::-webkit-scrollbar-thumb {
     background-color: var(--secondary);
     border-radius: 14px;
     border: 3px solid var(--primary);
-  }
+}
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: #FF3D00;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -27,10 +27,7 @@ export default function Home() {
                             <div className="flex flex-col items-center">
                                 <h2 className={`text-5xl font-normal text-center mx-16 w-1/2 mb-8  ${source_serif.className}`}>Learn <b className={` ${inter.className} text-blue-700`}>english</b> the easiest way with our AI tutor?</h2>
                                 <div className="text-center mt-8">
-                                    <a href="#" className="px-6 py-2 rounded-full text-md font-medium text-white  bg-blue-500 hover:bg-blue-700">Start learning with our AI tutor
-                                        <UserButton></UserButton>
-
-                                    </a>
+                                    <a href="#" className="px-6 py-2 rounded-full text-md font-medium text-white  bg-blue-500 hover:bg-blue-700">Start learning with our AI tutor</a>
                                 </div>
                             </div>
 
